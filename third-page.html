@@ -6,6 +6,26 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JS homework 1 | page 3</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .users-box {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1400px;
+      margin: 0 auto;
+    }
+
+    .user-block {
+      width: 50%;
+      padding: 20px;
+      background: lightgray;
+    }
+  </style>
 </head>
 <body>
 <script>
@@ -270,6 +290,23 @@
   //
   //
   // </div>
+
+  document.write('<div class="users-box">');
+  for (const user of usersList) {
+    document.write(`
+      <div class="user-block">
+        <h2>${user.id} - ${user.name} - ${user.username}</h2>
+        <h3>${user.email} - ${user.phone}</h3>
+        <div class="address-block">
+          <p>City - ${user.address.city}</p>
+          <p>Street - ${user.address.street}</p>
+          <p>Suite - ${user.address.suite}</p>
+          <p>Zip code - ${user.address.zipcode}</p>
+        </div>
+      </div>
+    `);
+  }
+  document.write('</div>');
 
 </script>
 </body>
