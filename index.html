@@ -75,7 +75,7 @@
   Використовуючи данні з масиву, за допомоги document.write та циклу
   побудувати структуру по шаблону template2.1 & template2.2. Зробити адекватну стилізацію.
   Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон.
-    Шаблон застосувати до кожного об'єкта в масиві
+  Шаблон застосувати до кожного об'єкта в масиві
    */
 
   let simpsons = [
@@ -125,7 +125,7 @@
 
   for (const simpson of simpsons) {
     document.write(`
-      <div>${simpson.name} - ${simpson.surname} - ${simpson.age} - ${simpson.info} - <img src="${simpson.photo}" alt="${simpson.name} ${simpson.surname}"></div>
+      <div>${simpson.name} - ${simpson.surname} - ${simpson.age} - ${simpson.info} - <img src="${simpson.photo}" alt=""></div>
     `);
   }
 
@@ -143,7 +143,7 @@
       <div>
         <h2>${simpson.name} ${simpson.surname}. Age is - ${simpson.age}</h2>
         <p>${simpson.info}</p>
-        <img src="${simpson.photo}" alt="${simpson.name} ${simpson.surname}">
+        <img src="${simpson.photo}" alt="">
       </div>
     `);
   }
@@ -174,7 +174,7 @@
       <div>
         <h2>${simpsons[i].name} ${simpsons[i].surname}. Age is - ${simpsons[i].age}</h2>
         <p>${simpsons[i].info}</p>
-        <img src="${simpsons[i].photo}" alt="${simpsons[i].name} ${simpsons[i].surname}">
+        <img src="${simpsons[i].photo}" alt="">
       </div>
     `);
   }
@@ -237,6 +237,7 @@
     `);
   }
   document.write('</div>');
+
 </script>
 </body>
 </html>
